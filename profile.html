@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+    <script src="profile.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="heading">
+      <div class="heading-bar">
+        <span>Profile</span>
+        <button id="edit-profile"><i class="fa-solid fa-pen"></i></button>
+      </div>
+    </header>
+
+    <!-- User Info -->
+    <section class="profile-info">
+      <div class="avatar" id="avatar-display">👤</div>
+      <h2 id="user-name">User Name</h2>
+      <p id="user-email">user@example.com</p>
+    </section>
+
+    <!-- Achievements / streaks -->
+    <section class="profile-achievements">
+      <div class="card">
+        <h3 id="current-streak">0</h3>
+        <span>Current Streak</span>
+      </div>
+      <div class="card">
+        <h3 id="longest-streak">0</h3>
+        <span>Longest Streak</span>
+      </div>
+      <div class="card">
+        <h3 id="total-completed">0</h3>
+        <span>Total Habits Completed</span>
+      </div>
+    </section>
+
+    <!-- Recent Activity -->
+    <section class="recent-activity">
+      <h3>Recent Activity</h3>
+      <ul id="recent-list">
+        <!-- dynamically populated -->
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-nav">
+      <a href="home.html"><i class="fa-solid fa-house"></i></a>
+      <a href="analytic.html"><i class="fa-solid fa-chart-simple"></i></a>
+      <a href="profile.html"><i style="color: steelblue;" class="fa-solid fa-user"></i></a>
+    </footer>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal">
+      <div class="modal-content">
+        <h4>Choose Your Avatar</h4>
+        <div class="avatar-options">
+          <span class="avatar-choice">😀</span>
+          <span class="avatar-choice">😎</span>
+          <span class="avatar-choice">🤓</span>
+          <span class="avatar-choice">🥸</span>
+          <span class="avatar-choice">😇</span>
+        </div>
+        <h3>Edit Profile</h3>
+        <input type="text" id="profile-name" placeholder="Enter your name" />
+        <input type="email" id="profile-email" placeholder="Enter your email" />
+        <div class="modal-buttons">
+          <button id="save-profile">Save</button>
+          <button id="cancel-profile">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

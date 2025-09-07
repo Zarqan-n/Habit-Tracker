@@ -101,3 +101,4 @@ document.querySelectorAll(".avatar-choice").forEach(el => {
     modal.style.display = "none"; // close modal after selection
   });
 });
+

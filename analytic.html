@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Analytics</title>
+  <link rel="stylesheet" href="analytic.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="analytic.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="heading">
+    <div class="heading-bar">
+      <span>Analytics of Habit</span>
+    </div>
+  </header>
+
+  <section class="analytics-summary">
+    <div class="card"><h3 id="total-habits">0</h3><span>Total Habits</span></div>
+    <div class="card"><h3 id="completed-habits">0</h3><span>Completed</span></div>
+    <div class="card"><h3 id="failed-habits">0</h3><span>Failed</span></div>
+    <div class="card"><h3 id="success-rate">0%</h3><span>Success Rate</span></div>
+  </section>
+
+  <section class="analytics-chart">
+    <canvas id="habitChart"></canvas>
+  </section>
+
+  <footer class="footer-nav">
+    <a href="home.html"><i class="fa-solid fa-house"></i></a>
+    <a href="analytic.html"><i style="color: steelblue;" class="fa-solid fa-chart-simple"></i></a>
+    <a href="profile.html"><i class="fa-solid fa-user"></i></a>
+  </footer>
+</body>
+</html>

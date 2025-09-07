@@ -19,87 +19,35 @@
     <header class="heading">
       <div class="heading-bar">
         <span>Your habits</span>
-        <div class="heading-icons" id="add-habit">
-          <i class="fa-solid fa-plus"></i>
-          <span>Add Habit</span>
+        <div style="display: flex; gap: 10px">
+          <div class="heading-icons" id="add-habit">
+            <i class="fa-solid fa-plus"></i>
+            <span>Add</span>
+          </div>
+          <div class="heading-icons" id="delete-habit-btn">
+            <i class="fa-solid fa-trash"></i>
+            <span>Delete</span>
+          </div>
         </div>
       </div>
       <span class="heading-sub">for today</span>
     </header>
 
     <section class="habit-summary">
-      <span>My Habits</span>
-      <span class="habit-progress">5 of 10 completed</span>
+      <span>Pending</span>
+      <span class="habit-progress">0 of 0 completed</span>
     </section>
 
-    <main class="habits">
-      <div class="habit-card">
-        <div class="habit-info">
-          <div class="habit-left">
-            <span class="habit-icon">🙂</span>
-            <div>
-              <h3>Drink Water</h3>
-              <span class="habit-goal">Goal: 2.00L</span>
-            </div>
-          </div>
-          <span class="habit-percent">0%</span>
-        </div>
-      </div>
+    <main class="habits"></main>
+    <section class="complete"><span>Completed</span></section>
+    <section class="fail"><span>Failed</span></section>
 
-      <div class="habit-card">
-        <div class="habit-info">
-          <div class="habit-left">
-            <span class="habit-icon">🙂</span>
-            <div>
-              <h3>Do morning exercises</h3>
-              <span class="habit-goal">Goal: 20min</span>
-            </div>
-          </div>
-          <span class="habit-percent">45%</span>
-        </div>
-      </div>
-    </main>
-
-    <section class="complete">
-      <span>completed</span>
-      <div class="habit-card">
-        <div class="habit-info">
-          <div class="habit-left">
-            <span class="habit-icon">🙂</span>
-            <div>
-              <h3>Do morning exercises</h3>
-              <span class="habit-goal">completed</span>
-              <i class="fa-solid fa-check"></i>
-            </div>
-          </div>
-          <span class="habit-percent">100%</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="fail">
-      <span>failed</span>
-      <div class="habit-card">
-        <div class="habit-info">
-          <div class="habit-left">
-            <span class="habit-icon">🙂</span>
-            <div>
-              <h3>Do morning exercises</h3>
-              <span class="habit-goal">Failed</span>
-              <i class="fa-solid fa-xmark"></i>
-            </div>
-          </div>
-          <span class="habit-percent">58%</span>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer-nav">
-      <i class="fa-solid fa-house"></i>
-      <i class="fa-solid fa-chart-simple"></i>
-      <i class="fa-solid fa-user"></i>
+    <footer>
+      <a href="home.html"><i style="color: steelblue;" class="fa-solid fa-house"></i></a>
+      <a href="analytic.html"><i class="fa-solid fa-chart-simple"></i></a>
+      <a href="profile.html"><i class="fa-solid fa-user"></i></a>
     </footer>
-    <!-- Modal for adding habit -->
+
     <div id="habit-modal" class="modal">
       <div class="modal-content">
         <h3>Add New Habit</h3>
@@ -115,5 +63,26 @@
         </div>
       </div>
     </div>
+    <div id="delete-modal" class="modal">
+      <div class="modal-content">
+        <h3>Delete a Habit</h3>
+        <ul id="delete-list">
+          <!-- populated dynamically -->
+        </ul>
+        <div class="modal-buttons">
+          <button id="cancel-delete">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div id="confirm-modal" class="modal">
+  <div class="modal-content">
+    <h3 id="confirm-text">Are you sure?</h3>
+    <div class="modal-buttons">
+      <button id="confirm-ok">OK</button>
+      <button id="confirm-cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
   </body>
 </html>
