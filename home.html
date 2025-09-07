@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="home.css" />
+    <script src="home.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="heading">
+      <div class="heading-bar">
+        <span>Your habits</span>
+        <div class="heading-icons" id="add-habit">
+          <i class="fa-solid fa-plus"></i>
+          <span>Add Habit</span>
+        </div>
+      </div>
+      <span class="heading-sub">for today</span>
+    </header>
+
+    <section class="habit-summary">
+      <span>My Habits</span>
+      <span class="habit-progress">5 of 10 completed</span>
+    </section>
+
+    <main class="habits">
+      <div class="habit-card">
+        <div class="habit-info">
+          <div class="habit-left">
+            <span class="habit-icon">🙂</span>
+            <div>
+              <h3>Drink Water</h3>
+              <span class="habit-goal">Goal: 2.00L</span>
+            </div>
+          </div>
+          <span class="habit-percent">0%</span>
+        </div>
+      </div>
+
+      <div class="habit-card">
+        <div class="habit-info">
+          <div class="habit-left">
+            <span class="habit-icon">🙂</span>
+            <div>
+              <h3>Do morning exercises</h3>
+              <span class="habit-goal">Goal: 20min</span>
+            </div>
+          </div>
+          <span class="habit-percent">45%</span>
+        </div>
+      </div>
+    </main>
+
+    <section class="complete">
+      <span>completed</span>
+      <div class="habit-card">
+        <div class="habit-info">
+          <div class="habit-left">
+            <span class="habit-icon">🙂</span>
+            <div>
+              <h3>Do morning exercises</h3>
+              <span class="habit-goal">completed</span>
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <span class="habit-percent">100%</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="fail">
+      <span>failed</span>
+      <div class="habit-card">
+        <div class="habit-info">
+          <div class="habit-left">
+            <span class="habit-icon">🙂</span>
+            <div>
+              <h3>Do morning exercises</h3>
+              <span class="habit-goal">Failed</span>
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <span class="habit-percent">58%</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-nav">
+      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-chart-simple"></i>
+      <i class="fa-solid fa-user"></i>
+    </footer>
+    <!-- Modal for adding habit -->
+    <div id="habit-modal" class="modal">
+      <div class="modal-content">
+        <h3>Add New Habit</h3>
+        <input type="text" id="habit-name" placeholder="Habit Name" />
+        <input
+          type="text"
+          id="habit-goal"
+          placeholder="Goal (e.g., 2L, 20min)"
+        />
+        <div class="modal-buttons">
+          <button id="save-habit">Save</button>
+          <button id="cancel-habit">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
